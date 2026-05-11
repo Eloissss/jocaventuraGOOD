@@ -38,6 +38,23 @@ public class Jugador {
     }
     public void moureA(Direccio direccio) {
         Habitacio seguent = posicioActual.getSortida(direccio);
+
+        /*Clau clau = (Clau) getItemInventari("clau");
+        if (clau != null ) {
+            boolean oberta = tancada.intentarObrir(clau);
+            if (!oberta){
+                System.out.println("No tens la clau correcte");
+            } else {
+                System.out.println("Necessites una clau");
+            }
+        }
+
+
+        if ( seguent != null){
+            posicioActual = seguent;
+            System.out.println(posicioActual);
+        }
+        */
         if (seguent != null) {
             posicioActual = seguent;
             System.out.println("T'has mogut cap al " + direccio.toString().toLowerCase() + ".");

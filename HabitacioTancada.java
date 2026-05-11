@@ -29,8 +29,8 @@ public class HabitacioTancada extends Habitacio {
         return idClauRequerida;
     }
 
-    public boolean intentarObrir(Clau clauJugador) {
-        if (this.idClauRequerida.equals(clauJugador.getidPany())) {
+    public boolean intentarObrir(Clau clau) {
+        if (this.idClauRequerida.equals(clau.getidPany())) {
             this.oberta = true;
             return true;
         }

@@ -7,12 +7,12 @@ public class JocAventura {
         Habitacio passadis   = new Habitacio("Passadís Llarg",      "Un passadís ple de teranyines. Sents passes al fons.");
         Habitacio biblioteca = new Habitacio("Biblioteca",           "Milers de llibres vells agafen pols. Hi ha una olor dolça.");
         Habitacio fosca = new Habitacio("Fosca",           "Timc po.");
-        tencada= new HabitacioTancada("Tencada","Et trobas davant una porta tencada mes gran que en ratatui, veig que no poseeixes l'objecta necessari per proseguir la teva aventura, dona mitja volta i marxa","clau1");
+        tencada= new HabitacioTancada("Tencada","Et trobas davant una porta tencada mes gran que en ratatui, veig que no poseeixes l'objecta necessari per proseguir la teva aventura, dona mitja volta i marxa","clau");
 
         Llanterna llanterna = new Llanterna();
         biblioteca.setItem(llanterna);
 
-        Clau clau = new Clau("clau1");
+        Clau clau = new Clau("clau");
         passadis.setItem(clau);
 
         entrada.setSortida(Direccio.NORD, passadis);
