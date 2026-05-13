@@ -49,20 +49,6 @@ public class Jugador {
     public void moureA(Direccio direccio) {
         Habitacio seguent = posicioActual.getSortida(direccio);
 
-
-        if (seguent instanceof HabitacioTancada) {
-            HabitacioTancada tancada = (HabitacioTancada) seguent;
-            if (!tancada.estaOberta()) {
-                Clau clau = (Clau) getItemInventari("clau");
-                if (clau != null && tancada.intentarObrir(clau)) {
-                    System.out.println("Has obert la porta amb la clau!");
-                } else {
-                    System.out.println("La porta està tancada. Necessites la clau correcta.");
-                    return;
-                }
-            }
-        }
-        
         if (seguent != null) {
             posicioActual = seguent;
             System.out.println("T'has mogut cap al " + direccio.toString().toLowerCase() + ".");

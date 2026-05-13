@@ -1,9 +1,9 @@
 public class Clau extends Item {
     private String idPany;
 
-    public Clau(String id) {
+    public Clau(String idPany) {
         super("calu",  "Una Clau", true);
-        this.idPany = id;
+        this.idPany = idPany;
     }
 
     public String getidPany() {
