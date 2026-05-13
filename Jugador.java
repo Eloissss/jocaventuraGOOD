@@ -2,13 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 public class Jugador {
     private Habitacio posicioActual;
-    private List<Item> inventari;
+    public List<Item> inventari;
 
     public Jugador(Habitacio inici) {
 
         this.posicioActual = inici;
         this.inventari = new ArrayList<>();
     }
+
 
     public Habitacio getPosicioActual() { return posicioActual; }
 
@@ -28,13 +29,22 @@ public class Jugador {
         }
     }
 
-    public Item getItemInventari(String nomItem) {
+    public Item buscarItem(String nom) {
         for (Item i : inventari) {
-            if (i.getNom().equalsIgnoreCase(nomItem)) {
+            if (i.getNom().equalsIgnoreCase(nom)) {
                 return i;
             }
         }
         return null;
+    }
+
+    public boolean GetIteminventari(String nomItem){
+        for(Item i: inventari){
+            if(i.getNom().equals(nomItem)){
+                return true;
+            }
+        }
+        return false;
     }
     public void moureA(Direccio direccio) {
         Habitacio seguent = posicioActual.getSortida(direccio);

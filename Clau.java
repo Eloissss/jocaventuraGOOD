@@ -2,7 +2,7 @@ public class Clau extends Item {
     private String idPany;
 
     public Clau(String id) {
-        super("clau",  "Una Clau", true);
+        super("calu",  "Una Clau", true);
         this.idPany = id;
     }
 
